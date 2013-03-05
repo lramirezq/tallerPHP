@@ -1,7 +1,4 @@
 <?php
-  require('include/connection.php');
-  connecToDB();
-
 ?>
 <html>
 	<head>
@@ -12,8 +9,8 @@
 		
 		<table>
 			<tr>
-				<td>Para Reservar</td>
-				<td><a href="reserva.php">Pinche Aqui !</a></td>
+				<td>Solicitud de Servicio</td>
+				<td><a href="solicitud.php">Pinche Aqui !</a></td>
 			</tr>
 			<tr>
 				<td>Para Administrar</td>
