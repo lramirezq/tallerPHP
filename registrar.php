@@ -32,9 +32,9 @@
 		</tr>
 		<tr>
 			<td>Password</td>
-			<td><input id="password" name="password" type="text"/></td>
+			<td><input id="password" name="password" type="password"/></td>
 			<td>Repita Password</td>
-			<td><input id="password1" name="password1" type="text"/></td>
+			<td><input id="password1" name="password1" type="password"/></td>
 		</tr>
 		<tr>
 			<td colspan="3"><input type="submit" id="boton" value="Ingresar Usuario"></td>

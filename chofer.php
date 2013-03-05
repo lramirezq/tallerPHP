@@ -26,7 +26,7 @@
  }
   
 ?>
-
+<p><a href="index.php">HOME</a>
 <h2>Ingreso de Chofer ! </h2>
 <form action="chofer.php" method="POST">
 <table>

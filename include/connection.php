@@ -31,8 +31,7 @@
    }
 
 
-  //Function que devuelve el ComboBox de Comunas !
-
+//Function que devuelve el ComboBox de Comunas !
 function trae_comunas(){
 	$sql = "select * from TBCOMUNA";
 	$rs  = mysql_query($sql);
@@ -46,11 +45,36 @@ function trae_comunas(){
 		return $combo;
 }
 
+//Funcion que devuelve el nombre de una comuna dependiendo de su ID
 function trae_nombre_comuna($id){
 	$sql = "select * from TBCOMUNA where CO_CODIGO = '$id'";
 	$rs  = mysql_query($sql);
 	while ($fila = mysql_fetch_assoc($rs)) {
 	   $nombre = $fila['CO_DESCRIPCION'];
+	}
+	return $nombre;
+}
+
+//Funcion para crear combobox de Choferes
+function trae_choferes(){
+	$sql = "select * from TBCHOFER";
+	$rs  = mysql_query($sql);
+	$combo = "<select name='chofer' id='chofer'>";
+	$combo = $combo."<option value=''>Seleccione...</option>";
+	
+	while ($fila = mysql_fetch_assoc($rs)) {
+			$combo = $combo."<option value='".$fila['CH_RUT']."'>".$fila['CH_NOMBRE']." ".$fila['CH_APPAT']."</option>";
+	}
+		$combo=$combo."</select>";
+		return $combo;
+}
+
+//Funcion que devuelve el nombre de un chofer dependiendo de su ID
+function trae_nombre_chofer($id){
+	$sql = "select * from TBCHOFER where CH_RUT = '$id'";
+	$rs  = mysql_query($sql);
+	while ($fila = mysql_fetch_assoc($rs)) {
+	   $nombre = $fila['CH_NOMBRE']." ".$fila['CH_APPAT'];
 	}
 	return $nombre;
 }
