@@ -1,3 +1,4 @@
+<p><a href="index.php">HOME</a>
 <p>Si UD. es un usuario nuevo favor registrese <a href="registrar.php">AQUI</a>	
 
 <form action="solicitud.php" method="post">

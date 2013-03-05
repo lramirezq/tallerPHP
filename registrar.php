@@ -10,19 +10,17 @@
 	if($p == $p1){
 		$sql = "insert into TBUSUARIO (US_RUT, US_NOMBRE, US_CLAVE) VALUES ('$u','$n','$p1')";
 		$rs = mysql_query($sql);
-		
 		if (!$rs) {
 		    die('Consulta no válida: ' . mysql_error());
 		}
-		
 		header('Location: solicitud.php');
-		
     }else{
-		echo "Las Passwords no coinciden !!";
+	   echo "Las Passwords no coinciden !!";
 	}
   }
 
 ?>
+<p><a href="index.php">HOME</a>
 <p>Para poder realizar la Solicitud del Servicio es necesario que se registre...
 <form action="registrar.php" method="POST">
 	<table>

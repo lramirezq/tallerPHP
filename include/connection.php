@@ -31,5 +31,28 @@
    }
 
 
+  //Function que devuelve el ComboBox de Comunas !
+
+function trae_comunas(){
+	$sql = "select * from TBCOMUNA";
+	$rs  = mysql_query($sql);
+	$combo = "<select name='comuna' id='comuna'>";
+	$combo = $combo."<option value=''>Seleccione...</option>";
+	
+	while ($fila = mysql_fetch_assoc($rs)) {
+			$combo = $combo."<option value='".$fila['CO_CODIGO']."'>".$fila['CO_DESCRIPCION']."</option>";
+	}
+		$combo=$combo."</select>";
+		return $combo;
+}
+
+function trae_nombre_comuna($id){
+	$sql = "select * from TBCOMUNA where CO_CODIGO = '$id'";
+	$rs  = mysql_query($sql);
+	while ($fila = mysql_fetch_assoc($rs)) {
+	   $nombre = $fila['CO_DESCRIPCION'];
+	}
+	return $nombre;
+}
 
 ?>
