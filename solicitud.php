@@ -1,16 +1,10 @@
 <?php
 require('include/connection.php');
-$val_user = validadUser($_POST["us_log"], $_POST["us_pas"]);
-
-	if($val_user){
-		echo "Aqui Ingresaremos la solicitud !!";
-	}else{
-		header('Location: login.php');
-	}
-
-
-
-
-
+require('include/menu.php'); 
+session_start();
+check_user();
 ?> 
-<p><a href="index.php">HOME</a>
+
+<link href="styles/estilo.css" rel="stylesheet" type="text/css">
+<?= pinta_menu();?>
+<h1>Realice su Solicitud </h1>

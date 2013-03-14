@@ -6,4 +6,4 @@
 ?>
 <? pinta_menu();?>
 <?=pinta_menu_admin();?>
-
+<h1>Administración de Usuarios</h1>

@@ -1,6 +1,8 @@
 <?php
   require('include/connection.php');
-  
+  require('include/menu.php'); 
+ session_start();
+ check_user();
   //Traer Listado de Choferes
  $sql = "select * from TBCHOFER";
  $rs = mysql_query($sql);
@@ -24,10 +26,10 @@
 	   header('Location: chofer.php');
 	}
  }
-  
 ?>
-<p><a href="index.php">HOME</a>
-<h2>Ingreso de Chofer ! </h2>
+<?= pinta_menu();?>
+<?=pinta_menu_admin();?>
+<h1>Administración de Choferes</h1>
 <form action="chofer.php" method="POST">
 <table>
 	<tr>
@@ -55,7 +57,7 @@
 </form>
 
 <h2>Listado de Choferes</h2>
-<table border="1">
+<table border="1"  class='datos'>
   <tr>
 	<th>RUT</th>
 	<th>NOMBRE</th>

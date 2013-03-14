@@ -1,6 +1,9 @@
 <?php
- header('Content-Type: text/html; charset=UTF-8');
   require('include/connection.php');
+  require('include/menu.php');
+
+  session_start();
+  check_user();
   //VE_PATENTE 	VE_MARCA 	VE_AÑO 	VE_COLOR 	VE_CAPAC 	CH_RUT 
   //Listado de Vehiculos
   $sql = "select * from TBVEHICULO";
@@ -24,8 +27,9 @@
 	}
  }
 ?>
-<p><a href="index.php">HOME</a>
-<h2>Ingreso de Vehiculos </h2>
+<?= pinta_menu();?>
+<?=pinta_menu_admin();?>
+<h1>Administración de Vehiculos</h1>
 <form action="" method="POST">
 <table>
 	<tr>
@@ -50,7 +54,7 @@
 </table>
 </form>
 <h2>Listado de Vehiculos </h2>
-<table border="1">
+<table border="1" class='datos'>
 	<tr>
 		<th>PATENTE</th>
 		<th>MARCA</th>

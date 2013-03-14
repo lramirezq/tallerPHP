@@ -1,5 +1,6 @@
 <?php
-	//Generate connection to Database
+	//UTF-8
+	header('Content-Type: text/html; charset=UTF-8');
 
 
 	// Create connection
@@ -11,24 +12,17 @@
     $conexion = mysql_connect ($server, $user, $pass) or die ('No me puedo conectar a la base de datos porque: '.mysql_error());
    mysql_select_db ($dataBase  ,$conexion);
 
-   //Funcion para realizar la validación del usuario
-   //return true = Valido
-   //return false = invalido
-   function validadUser($user, $pass){
-	$sql = "select count(*) as autorizado from TBUSUARIO where us_rut = '$user' and us_clave = '$pass'";
-	$result = mysql_query($sql);
 
-	while($row=mysql_fetch_assoc($result)){ 
-	   $aut =  $row['autorizado']; 
-	}
 
-	if ($aut == 1){
-		return true;
-	}else{
-		return false;
+//Function que realiza Check de Sesión de User
+function check_user(){
+	if ( !isset ($_SESSION['usuario']) && !isset ($_SESSION['clave']))  
+	{
+		session_destroy();
+		header("Location: login.php");
 	}
-	 
-   }
+}
+
 
 
 //Function que devuelve el ComboBox de Comunas !

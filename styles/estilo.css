@@ -1,0 +1,355 @@
+/******************** Estilos para las etiquetas ********************/
+
+#container2 {
+	  width: 855px;
+	  margin: 0 auto;
+	  font-family: Verdana, Arial, Helvetica, sans-serif;
+	  font-size: 12px;
+	  color: #666666;
+	  background-color: #FFFFFF;
+	  }
+	  
+content {
+	  width: 520px;
+	  padding-left: 10px;
+	  padding-right: 10px;
+	  padding-top: 10px;
+	  float: left;
+	  
+	  }
+
+input
+{
+background-color: #FFFFFF;
+color: #999999;
+font-family: sans-serif;
+font-size: 11px;
+border: 1px groove #008080;
+text-align: center;
+-moz-border-radius:10px 10px;
+}
+
+fieldset
+{
+background-color: #FFFFFF;
+color: #999999;
+font-family: sans-serif;
+font-size: 11px;
+border: 1px groove #008080;
+text-align: left;
+-moz-border-radius:10px 10px;
+}
+textarea
+{
+background-color: #FFFFFF;
+color: #000000;
+font-family: sans-serif;
+font-size: 11px;
+border: 1px groove #008080;
+text-align: left;
+}
+.marco
+{
+border: 1px groove #008080;
+//-moz-border-radius:10px 10px;
+}
+.sexo
+{
+width: 261px;
+text-align: left;
+font-family: sans-serif;
+color: #008080;
+font-style: italic;
+}
+.boton
+{
+background-color: #008080;
+color: #EDEDF6;
+font-family: sans-serif;
+font-weight: bold;
+font-size: 10.5px;
+border: 1px groove #008080;
+-moz-border-radius:10px 10px;
+}
+.letra
+{
+color: #666666;
+font-family: sans-serif;
+font-weight: bold;
+font-size: 14px;
+}
+.letras
+{
+color: #666666;
+font-family: sans-serif;
+}
+.letricas
+{
+color: #000000;
+font-family: sans-serif;
+}
+.pie
+{
+color: #666666;
+font-family: sans-serif;
+font-size: 11px;
+font-weight: bold;
+}
+.icons
+{
+text-align: center;
+font-family: sans-serif;
+color: #008080;
+}
+.formula
+{
+width: 261px;
+text-align: right;
+font-family: sans-serif;
+color: #666666;
+font-weight: bold;
+}
+.correcta
+{
+width: 261px;
+text-align: right;
+font-family: sans-serif;
+color: #990000;
+font-weight: bold;
+}
+.correcta2
+{
+background-color: #FFFFFF;
+color: #000000;
+font-family: sans-serif;
+font-size: 11px;
+border: 1px groove #990000;
+text-align: left;
+}
+.contenido
+{
+width: 261px;
+text-align: left;
+font-family: sans-serif;
+color: #008080;
+font-weight: bold;
+}
+.pregunta
+{
+text-align: left;
+font-family: sans-serif;
+color: #000000;
+font-size: 14px;
+}
+.pregunta2
+{
+text-align: left;
+font-family: sans-serif;
+color: #000000;
+}
+.formula1
+{
+width: 261px;
+text-align: center;
+font-family: sans-serif;
+color: #007AAD;
+font-weight: bold;
+}
+.formula2
+{
+width: 261px;
+text-align: left;
+font-family: sans-serif;
+color: #147700;
+font-weight: bold;
+padding-left: 100px;
+}
+.formula3
+{
+width: 261px;
+text-align: center;
+font-family: sans-serif;
+color: #008080;
+font-weight: bold;
+}
+select
+{
+background-color: #FFFFFF;
+color: #000000;
+font-family: sans-serif;
+font-size: 11px;
+border: 1px groove #008080;
+text-align: left;
+}
+.tablita
+{
+background-color: #008080;
+color: #FFFFFF;
+text-align: center;
+font-family: sans-serif;
+font-weight: bold;
+}
+.sin
+{
+text-align: center;
+font-family: sans-serif;
+color: #008080;
+}
+a
+{
+color: #008080;
+font-size: 12pt;
+font-weight: bold;
+text-decoration: none;
+font-family: sans-serif;
+}
+a:hover
+{
+color: #008080;
+font-size: 12pt;
+font-weight: bold;
+text-decoration: underline;
+font-family: sans-serif;
+}
+I
+
+html{
+	top:0;
+	height: 100%;
+	text-align:center;
+	margin:0 auto;
+	padding:0;
+	background: url(../img/bg.jpg) no-repeat center center #fff;
+	overflow:scroll;
+}
+
+body {
+	top:0;
+	height: 100%;
+	width:100%;
+	margin: 0 auto;
+	padding:0;
+	text-align:left; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:1.5em;
+}
+
+a:link{ color: #008080; }
+
+a:visited{ color: #AD660C; }
+
+a:hover, a:focus{ color: #FF9814;	text-decoration:none; }
+
+p{	margin:1em 0; }
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{	margin-top:-0.05em;}
+
+h1, h2, h3, h4, h5, h6{ color: #9CA716; margin-bottom:0.5em; text-align:center; }
+
+h1{ font-size:24px;}
+
+h2{	font-size:20px;}
+
+h3{	font-size:18px;}
+
+h4{	font-size:16px;}
+
+h5{	font-size:14px;}
+
+h6{	font-size:12px;}
+
+ol, ul{	margin: 1em 0 1em 2em; }
+
+ol ol, ol ul, ul ol, ul ul{ margin-top:0; margin-bottom:0; }
+
+ol li{	list-style:decimal }
+ol li ol li{ list-style:upper-alpha; }
+ol li ol li ol li{ list-style:upper-roman; }
+
+ul li{ list-style:disc;}
+
+em{font-style:italic;}
+
+strong{font-weight:bold;}
+
+em strong, strong em{ font-weight:bold; font-style:italic; }
+
+#container {
+	display:block;
+	position: absolute;
+	padding:0;
+	width:70%;
+	height:210px;
+	background:#fff;
+	top:50%;
+	margin:-100px 200 200 200;
+	border:solid #008080;
+	border-width:3px 0 3px 0;
+	
+	opacity: 0.90;
+	-moz-opacity: 0.90;
+	filter: alpha(opacity=90);
+}
+
+#logo{
+	display:block;
+	position: absolute;
+	width:186px;
+	height:32px;
+	background: url(../img/logo.gif) no-repeat 0 0;
+	left:50%;
+	margin:0 0 0 -280px;
+	top:15px;
+	overflow:hidden;
+	text-indent:999em;
+	line-height:999em;
+}
+
+#content{
+	position:relative;
+	display:block;
+	width: 400px;
+	left:50%;
+	margin:0 0 0 -50px;
+	padding:15px 0;
+	top:10px;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	margin:0;
+	width:100%;
+	text-align:center;
+	left:0;
+}
+
+#DHTMLgoodies_formTooltipDiv{
+	color:#FFF;
+	font-family:arial;
+	font-weight:bold;
+	font-size:0.8em;
+	line-height:120%;
+}
+.DHTMLgoodies_formTooltip_closeMessage{
+	color:#FFF;
+	font-weight:normal;
+	font-size:0.7em;
+}
+
+table { 
+  border-spacing:0;
+  border-collapse:collapse;
+width:100%; font-family:Arial, Helvetica, sans-serif; font-size:10px;
+}
+
+
+table.datos tr:nth-of-type(odd) {  background-color:#ccc;} 
+
+th{
+	border-top:2px solid #9CA716;
+		background-color:#BBC0C8;
+		color:#333;
+		font-size:11px
+}
