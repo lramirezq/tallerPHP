@@ -18,9 +18,10 @@ $comuna= $_POST[comuna];
 $operacion= $_POST[operacion];
 $correo= $_POST[c_mail];
 $hora_sol= $_POST[s_hora];
-$origen = $_POST[s_origen];
+$origen= $_POST[s_origen];
 $destino= $_POST[s_destino];
 
+$msg = "";
 //echo "Datos recibidos".$rut." | ".$nombre." | ".$telefono." | ".$direccion." | ".$comuna." | ".$operacion." | ".$correo." | ".$hora_sol." | ".$origen." | ".$destino;
 
 //Ingreso de Cliente y Solicitud
@@ -32,6 +33,8 @@ if ($operacion == "NEW"){
 	    die('Consulta no válida: ' . mysql_error());
 	}
 	//Ingresamos la solicitud
+	
+if(($origen !="")&& ($destino !="")){
 	$sql_insert_sol = "insert into TBSOLICITUDES (SO_HORA_SOL,CL_RUT,ES_CODIGO,SO_ORIGEN,SO_DESTINO) values ('$hora_sol','$rut','P','$origen','$destino')";
 	$rs_insert1 = mysql_query($sql_insert_sol);
 	if (!$rs_insert1) {
@@ -41,7 +44,9 @@ if ($operacion == "NEW"){
   $id = mysql_insert_id();
 
   $msg =  "Su Solicitud ha sido recibida, y a quedado registrada con el número <b>$id</b> una operadora se contactará con Ud.";
-	
+  header("location: gracias.php?msg=".$msg);
+  
+}	
 
 	
 	
@@ -52,7 +57,9 @@ if ($operacion == "NEW"){
 	    die('Consulta no válida: ' . mysql_error());
 	}
 	
+	
 	//Ingresamos la solicitud
+	if(($origen !="")&& ($destino !="")){
 	$sql_insert_sol = "insert into TBSOLICITUDES (SO_HORA_SOL,CL_RUT,ES_CODIGO,SO_ORIGEN,SO_DESTINO) values ('$hora_sol','$rut','P','$origen','$destino')";
 	$rs_insert1 = mysql_query($sql_insert_sol);
 	if (!$rs_insert1) {
@@ -62,8 +69,9 @@ if ($operacion == "NEW"){
   $id = mysql_insert_id();
 
   $msg =  "Su Solicitud ha sido recibida, y a quedado registrada con el número <b>$id</b> una operadora se contactará con Ud.";
-
+  header("location: gracias.php?msg=".$msg);
 	
+}	
 	
 }
 

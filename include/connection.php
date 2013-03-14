@@ -98,4 +98,57 @@ function trae_nombre_dia($id){
 	}
 	return $nombre;
 }
+
+
+//Funcion que devuelve el nombre Cliente dependiendo del RUT
+function trae_nombre_cliente($id){
+	$sql = "select * from TBCLIENTES where CL_RUT = '$id'";
+	$rs  = mysql_query($sql);
+	while ($fila = mysql_fetch_assoc($rs)) {
+	   $nombre = $fila['CL_NOMBRE'];
+	}
+	return $nombre;
+}
+
+//Funcion que devuelve el nombre del Estado dependiendo del id
+function trae_nombre_estado($id){
+	$sql = "select * from TB_ESTADO where ES_CODIGO = '$id'";
+	$rs  = mysql_query($sql);
+	while ($fila = mysql_fetch_assoc($rs)) {
+	   $nombre = $fila['ES_DESCRIP'];
+	}
+	return $nombre;
+}
+
+
+//Funcion que crear combo box de estados
+function trae_estados(){
+	$sql = "select * from TB_ESTADO";
+	$rs  = mysql_query($sql);
+	$combo = "<select name='estado' id='estado'>";
+	$combo = $combo."<option value=''>Seleccione...</option>";
+	
+	while ($fila = mysql_fetch_assoc($rs)) {
+			$combo = $combo."<option value='".$fila['ES_CODIGO']."'>".$fila['ES_DESCRIP']."</option>";
+	}
+		$combo=$combo."</select>";
+		return $combo;
+}
+
+
+//Funcion que crear combo box de estados
+function trae_vehiculos(){
+	$sql = "select * from TBVEHICULO";
+	$rs  = mysql_query($sql);
+	$combo = "<select name='vehiculo' id='vehiculo'>";
+	$combo = $combo."<option value=''>Seleccione...</option>";
+	
+	while ($fila = mysql_fetch_assoc($rs)) {
+			$combo = $combo."<option value='".$fila['VE_PATENTE']."'>".$fila['VE_PATENTE']." | Conductor     : ".trae_nombre_chofer($fila[CH_RUT])."</option>";
+	}
+		$combo=$combo."</select>";
+		return $combo;
+}
+
+
 ?>
