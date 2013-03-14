@@ -11,7 +11,7 @@
   if(($p != "") && ($u != "") && ($n !="")){
 	if($p == $p1){
 		$pass = md5($p1);
-		$sql = "insert into TBUSUARIO (US_RUT, US_NOMBRE, US_CLAVE) VALUES ('$u','$n','$pass')";
+		$sql = "insert into TBUSUARIO (US_RUT, US_NOMBRE, US_CLAVE, TU_CODIGO) VALUES ('$u','$n','$pass', 'CLI')";
 		$rs = mysql_query($sql);
 		if (!$rs) {
 		    die('Consulta no válida: ' . mysql_error());

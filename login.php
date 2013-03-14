@@ -13,8 +13,6 @@ if(!isset($_SESSION))
     session_start();
 }
 
-
-
 $sql = "select * from TBUSUARIO where us_rut = '$user' and us_clave = '$pass'";
 $result = mysql_query($sql);
 
@@ -22,6 +20,7 @@ while($row=mysql_fetch_assoc($result)){
 	    $_SESSION['usuario'] = $row['US_RUT'];
 	    $_SESSION['clave'] = $row[$var2];
 		$_SESSION['nombre'] = $row['US_NOMBRE'];
+		$_SESSION['perfil'] = $row['TU_CODIGO'];
 		$sw = 1;
 }
 
@@ -38,7 +37,7 @@ if ($sw == 1){
 <br/>
 <p><?=$msg?>
 <form action="login.php" method="post">
-	<table align="center">
+	<table align="center" class="login">
 		<tr>
 			<td>Usuario</td>
 			<td><input id="us_log" name="us_log" type="text"/></td>

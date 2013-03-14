@@ -28,7 +28,8 @@ function pinta_menu_admin(){
 	<li><a href='solicitud.php'><b>Solicitudes</b></a></li>
 	<li><a href='chofer.php'><b>Choferes</b></a></li>
 	<li><a href='vehiculo.php'><b>Vehiculos</b></a></li>
-	<li><a href='usuario.php'><b>Usuarios</b></a></li></ul>";
+	<li><a href='usuario.php'><b>Usuarios</b></a></li>
+	<li><a href='horario.php'><b>Horarios</b></a></li></ul>";
 	
 }
 

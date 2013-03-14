@@ -73,4 +73,29 @@ function trae_nombre_chofer($id){
 	return $nombre;
 }
 
+
+//Funcion para crear combobox de Dias
+function trae_dias(){
+	$sql = "select * from TBDIA";
+	$rs  = mysql_query($sql);
+	$combo = "<select name='dia' id='dia'>";
+	$combo = $combo."<option value=''>Seleccione...</option>";
+	
+	while ($fila = mysql_fetch_assoc($rs)) {
+			$combo = $combo."<option value='".$fila['DD_CODIGO']."'>".$fila['DD_NOMBRE']." ".$fila['CH_APPAT']."</option>";
+	}
+		$combo=$combo."</select>";
+		return $combo;
+}
+
+
+//Funcion que devuelve el nombre del dia dependiendo de su ID
+function trae_nombre_dia($id){
+	$sql = "select * from TBDIA where DD_CODIGO = '$id'";
+	$rs  = mysql_query($sql);
+	while ($fila = mysql_fetch_assoc($rs)) {
+	   $nombre = $fila['DD_NOMBRE'];
+	}
+	return $nombre;
+}
 ?>

@@ -353,3 +353,9 @@ th{
 		color:#333;
 		font-size:11px
 }
+
+table.login {
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
